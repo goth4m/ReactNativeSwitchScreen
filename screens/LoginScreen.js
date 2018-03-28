@@ -5,10 +5,13 @@ class LoginScreen extends Component{
         title: 'LoginScreen',
       };
     render(){
+        var {navigate}=this.props.navigation;
         return(
             <View style={{backgroundColor:'#ffffff',flex:1}}>
             <Text>Login 2</Text>
-            <Button style={{backgroundColor:'#000000',width: 100,height: 40,}} onPress={()=>this.props.navigation.navigate('HomeScreen')} title="Go to home"/>
+            <Button style={{backgroundColor:'#000000',width: 100,height: 40,}} onPress={()=>navigate('HomeScreen',{
+                name:"Tuan",
+            })} title="Go to home"/>
             </View>
         );
     }
